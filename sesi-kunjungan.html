@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>PULAU — Sesi Kunjungan</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page-header">
+    <button class="back-btn" onclick="window.location.href='index.html'">← Kembali</button>
+    <h2 class="page-title">Pilih Jam Kunjungan</h2>
+    <p class="page-subtitle">Tentukan waktu terbaik untuk wisata Anda</p>
+    <div class="progress-bar"><div class="progress-fill" style="width:50%"></div></div>
+  </div>
+
+  <div class="section">
+    <div class="pkg-pill">
+      <span>🏝️</span>
+      <span class="pkg-name" id="pkg-name-display">—</span>
+      <span class="pkg-price" id="pkg-price-display">—</span>
+    </div>
+
+    <p class="section-title">Sesi Kunjungan</p>
+    <p class="section-sub">Pilih satu sesi waktu kunjungan ke destinasi wisata</p>
+
+    <div class="time-slot slot-morning" id="slot-morning" onclick="selectSlot('morning')">
+      <div class="time-icon">🌅</div>
+      <div class="slot-info">
+        <h4>Sesi Pagi</h4>
+        <p>Udara segar, cahaya emas — terbaik untuk foto alam</p>
+      </div>
+      <div class="slot-time">07:00</div>
+    </div>
+
+    <div class="time-slot slot-afternoon" id="slot-afternoon" onclick="selectSlot('afternoon')">
+      <div class="time-icon">☀️</div>
+      <div class="slot-info">
+        <h4>Sesi Siang</h4>
+        <p>Aktivitas air penuh semangat di bawah terik matahari</p>
+      </div>
+      <div class="slot-time">13:00</div>
+    </div>
+
+    <div class="time-slot slot-evening" id="slot-evening" onclick="selectSlot('evening')">
+      <div class="time-icon">🌇</div>
+      <div class="slot-info">
+        <h4>Sesi Sore</h4>
+        <p>Sunset terbaik dan suasana romantis menjelang malam</p>
+      </div>
+      <div class="slot-time">16:30</div>
+    </div>
+  </div>
+
+  <div class="btn-group">
+    <button class="btn btn-primary" id="btn-next" disabled onclick="goNext()">
+      Lanjut Isi Data Diri →
+    </button>
+    <button class="btn btn-ghost" onclick="window.location.href='index.html'">← Kembali ke Pilih Paket</button>
+  </div>
+
+<script src="sesi-kunjungan.js"></script>
+</body>
+</html>

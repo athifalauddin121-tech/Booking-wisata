@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>PULAU — Pilih Paket Wisata</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">PULAU<span>PULAU GEDE MERAK</span></div>
+    <div class="step-indicator">
+      <div class="step-dot active"></div>
+      <div class="step-dot"></div>
+      <div class="step-dot"></div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="wave-decoration"></div>
+    <div class="wave-decoration2"></div>
+    <h2>Jelajahi Keindahan<br>Pulau Gede Merak</h2>
+    <p>Pilih paket wisata terbaik untuk pengalaman tak terlupakan bersama PULO Travel.</p>
+    <svg class="hero-waves" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,60 L0,60 Z" fill="#f9f7f4"/>
+    </svg>
+  </div>
+
+  <div class="section">
+    <p class="section-title">Pilih Paket Wisata</p>
+    <p class="section-sub">Temukan paket yang sesuai dengan keinginan Anda</p>
+
+    <!-- STANDARD -->
+    <div class="card" id="card-standard" onclick="selectPackage('standard')">
+      <span class="card-badge badge-standard">Standard</span>
+      <h3 class="card-title">Paket Wisata Standar</h3>
+      <p class="card-dest">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Pulau Tidung → Kepulauan Seribu, Jakarta
+      </p>
+      <div class="card-features">
+        <span class="feature-tag">🚢 Kapal Ferry</span>
+        <span class="feature-tag">🏠 Penginapan 2 Malam</span>
+        <span class="feature-tag">🍽️ Sarapan</span>
+        <span class="feature-tag">🤿 Snorkeling</span>
+      </div>
+      <div class="card-price">Rp 850.000 <span>/ orang</span></div>
+    </div>
+
+    <!-- PREMIUM -->
+    <div class="card" id="card-premium" onclick="selectPackage('premium')">
+      <span class="popular-badge">TERPOPULER</span>
+      <span class="card-badge badge-premium">Premium</span>
+      <h3 class="card-title">Paket Wisata Premium</h3>
+      <p class="card-dest">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Pulau Komodo → Labuan Bajo, Nusa Tenggara Timur
+      </p>
+      <div class="card-features">
+        <span class="feature-tag">✈️ Tiket Pesawat</span>
+        <span class="feature-tag">🏨 Resort 3 Malam</span>
+        <span class="feature-tag">🍽️ Makan 3x</span>
+        <span class="feature-tag">🦎 Tour Komodo</span>
+        <span class="feature-tag">🤿 Diving</span>
+      </div>
+      <div class="card-price">Rp 3.200.000 <span>/ orang</span></div>
+    </div>
+
+    <!-- VIP -->
+    <div class="card" id="card-vip" onclick="selectPackage('vip')">
+      <span class="card-badge badge-vip">VIP</span>
+      <h3 class="card-title">Paket Wisata VIP</h3>
+      <p class="card-dest">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Pulau Raja Ampat → Sorong, Papua Barat
+      </p>
+      <div class="card-features">
+        <span class="feature-tag">✈️ Business Class</span>
+        <span class="feature-tag">🏝️ Private Villa 5 Malam</span>
+        <span class="feature-tag">🍾 All Inclusive</span>
+        <span class="feature-tag">🛥️ Private Boat</span>
+        <span class="feature-tag">📸 Fotografer</span>
+        <span class="feature-tag">💆 Spa</span>
+      </div>
+      <div class="card-price">Rp 12.500.000 <span>/ orang</span></div>
+    </div>
+  </div>
+
+  <div class="btn-group">
+    <button class="btn btn-primary" id="btn-next" disabled onclick="goNext()">
+      Lanjut Isi Data Diri →
+    </button>
+    <p style="text-align:center;font-size:12px;color:var(--text-light)">Pilih salah satu paket untuk melanjutkan</p>
+  </div>
+
+<script src="pilih-paket.js"></script>
+</body>
+</html>

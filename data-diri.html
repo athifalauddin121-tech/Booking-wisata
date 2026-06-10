@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>PULAU — Data Diri</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page-header">
+    <button class="back-btn" onclick="window.location.href='index.html'">← Kembali</button>
+    <h2 class="page-title">Data Diri Pemesan</h2>
+    <p class="page-subtitle">Lengkapi informasi Anda dengan benar</p>
+    <div class="progress-bar"><div class="progress-fill" style="width:66%"></div></div>
+  </div>
+
+  <div class="section">
+    <div class="pkg-pill">
+      <span>🏝️</span>
+      <span class="pkg-name" id="pkg-name-display">—</span>
+      <span class="pkg-price" id="pkg-price-display">—</span>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Nama Lengkap</label>
+      <input class="form-input" type="text" id="inp-nama" placeholder="Masukkan nama lengkap Anda" oninput="checkForm()">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Jenis Kelamin</label>
+      <div class="radio-group">
+        <div class="radio-opt" id="opt-l" onclick="selectGender('Laki-laki')">👨 Laki-laki</div>
+        <div class="radio-opt" id="opt-p" onclick="selectGender('Perempuan')">👩 Perempuan</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Umur</label>
+      <div class="age-input">
+        <button class="age-btn" onclick="changeAge(-1)">−</button>
+        <div class="age-display" id="age-display">25</div>
+        <button class="age-btn" onclick="changeAge(1)">+</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL KONFIRMASI -->
+  <div class="modal-overlay" id="modal-confirm">
+    <div class="modal">
+      <div class="modal-handle"></div>
+      <h3>Konfirmasi Pesanan</h3>
+      <p>Apakah data yang Anda masukkan sudah benar? Pesanan akan segera diproses setelah konfirmasi.</p>
+      <div style="background:var(--bg);border-radius:var(--r);padding:14px 16px;margin-bottom:20px">
+        <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px">
+          <span style="color:var(--text-muted)">Nama</span>
+          <strong id="confirm-nama">—</strong>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px">
+          <span style="color:var(--text-muted)">Paket</span>
+          <strong id="confirm-paket">—</strong>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:13px">
+          <span style="color:var(--text-muted)">Total</span>
+          <strong id="confirm-total" style="color:var(--sea-dark)">—</strong>
+        </div>
+      </div>
+      <div class="modal-buttons">
+        <button class="btn btn-primary" onclick="confirmBooking()">✓ Ya, Konfirmasi Pesanan</button>
+        <button class="btn btn-ghost" onclick="closeConfirm()">✕ Batalkan — Koreksi Data</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="btn-group">
+    <button class="btn btn-primary" id="btn-next" disabled onclick="showConfirm()">
+      Lanjut ke Konfirmasi →
+    </button>
+    <button class="btn btn-ghost" onclick="window.location.href='index.html'">← Kembali ke Pilih Paket</button>
+  </div>
+
+<script src="data-diri.js"></script>
+</body>
+</html>
